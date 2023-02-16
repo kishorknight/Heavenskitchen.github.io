@@ -1,0 +1,338 @@
+/* reset css */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* navigation bar */
+
+#navigation {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    top: 0%;
+}
+
+#navigation::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* navigation bar items */
+
+#navigation ul {
+    display: flex;
+}
+
+#navigation ul li {
+    list-style: none;
+}
+
+#navigation ul li a {
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.3rem;
+    color: white;
+    padding: 2px 24px;
+}
+
+#navigation ul li a:hover {
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 10px;
+}
+
+/* navigation logo */
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    height: 80px;
+    margin: 2px 10px;
+}
+
+#logo :hover {
+    cursor: pointer;
+}
+
+/* Home section */
+
+#Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 150px;
+    height: 550px;
+}
+
+#Home::before {
+    content: "";
+    position: absolute;
+    background: url('./bg1.jpg') no-repeat center center/cover;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 646px;
+    z-index: -2;
+    opacity: 0.82;
+}
+
+#Home h1 {
+    color: rgb(94, 214, 225);
+    font-size: 2.3rem;
+    margin: 20px;
+}
+
+#Home p {
+    color: aliceblue;
+    text-align: center;
+    margin: 3px;
+    font-size: 1.2rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 190px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Service section */
+
+#Services_container {
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Services_container::before {
+    content: "";
+    background-color: rgb(216, 109, 109);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.4;
+}
+
+#Services_container h1 {
+    font-size: 2.1rem;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#Services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: bisque;
+    /* z-index: -1; */
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.box:hover {
+    cursor: pointer;
+    background-color: rgb(226, 154, 66);
+    transform: scale(1.1);
+}
+
+/* #Services_container #box1{
+    /* z-index: 1; */
+/* transition: all .3s ease-in-out ;
+} */
+/* #Services_container #box1:hover{
+    cursor: pointer!important;
+    background-color: rgb(226, 154, 66) !important;
+    transform: scale(1.1) !important;
+}  */
+.box img {
+    height: 150px;
+    margin: 10px;
+
+}
+
+.box h2 {
+    padding: 10px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.box p {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* client section */
+#Client_section {
+    padding-top: 50px;
+    position: relative;
+    height: 300px;
+}
+
+#Client_section::before {
+    content: "";
+    background: url('./bg.jpg');
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+
+}
+
+.Clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -3;
+
+}
+
+.client-items {
+    z-index: -3;
+
+}
+
+.client-items img {
+    height: 120px;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* contact section */
+
+#contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact::before {
+    content: "";
+    background: url('./contact.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.45;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    font-size: 1.1rem;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 7px;
+    padding: 0.4rem;
+}
+
+#contact-box label {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.1rem;
+}
+
+#contact-box button {
+    margin: auto;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* utility classes */
+.primary_heading {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.primary_heading {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.0rem;
+    padding: 12px;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    width: 500px;
+    margin: 30px;
+    border: 2px solid wheat;
+    font-size: 1.1rem;
+    padding: 5px 5px;
+    border-radius: 15px;
+    background-color: rgb(220, 107, 107);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: burlywood;
+    color: aliceblue;
+}
